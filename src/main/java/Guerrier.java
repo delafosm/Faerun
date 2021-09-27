@@ -1,4 +1,4 @@
-public abstract class Guerrier {
+public class Guerrier {
     private final static int FORCE_INITIALE = 10;
     private final static int PV_INITIALE = 100;
     private final static int COUT_INITIALE = 1;
@@ -38,7 +38,7 @@ public abstract class Guerrier {
     }
 
     public void attaquer(Guerrier guerrier){
-        guerrier.subirDegats(PlateauUtilitaire.De3(getForce()));
+        guerrier.subirDegats(Utilitaire.De3(getForce()));
     }
 
     protected void subirDegats(int degats){

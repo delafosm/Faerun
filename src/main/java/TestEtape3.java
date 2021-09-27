@@ -6,15 +6,15 @@ public class TestEtape3 {
         LinkedList<Guerrier> guerriers = new LinkedList<>();
         guerriers.add(new ChefElfe());
         guerriers.add(new Elfe());
-        PlateauUtilitaire.Couleur bleu = PlateauUtilitaire.Couleur.BLEU;
-        PlateauUtilitaire.Couleur rouge = PlateauUtilitaire.Couleur.ROUGE;
+        Utilitaire.Couleur bleu = Utilitaire.Couleur.BLEU;
+        Utilitaire.Couleur rouge = Utilitaire.Couleur.ROUGE;
         plateau.getCarreaux().get(4).ajouterGuerriers(bleu, guerriers);
         plateau.getCarreaux().get(1).ajouterGuerriers(rouge, guerriers);
         plateau.getCarreaux().get(0).ajouterGuerriers(rouge, guerriers);
-        PlateauUtilitaire.afficherPlateau(plateau);
+        Utilitaire.afficherPlateau(plateau);
         plateau.deplaceGuerriers();
-        PlateauUtilitaire.afficherPlateau(plateau);
+        Utilitaire.afficherPlateau(plateau);
         plateau.deplaceGuerriers();
-        PlateauUtilitaire.afficherPlateau(plateau);
+        Utilitaire.afficherPlateau(plateau);
     }
 }

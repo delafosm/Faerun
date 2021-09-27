@@ -19,8 +19,8 @@ public class Plateau {
         int nbCarreaux = carreaux.size();
         LinkedList<Guerrier> gBleus;
         LinkedList<Guerrier> gRouges;
-        PlateauUtilitaire.Couleur bleu = PlateauUtilitaire.Couleur.BLEU;
-        PlateauUtilitaire.Couleur rouge = PlateauUtilitaire.Couleur.ROUGE;
+        Utilitaire.Couleur bleu = Utilitaire.Couleur.BLEU;
+        Utilitaire.Couleur rouge = Utilitaire.Couleur.ROUGE;
 
         for (int i = 0; i < nbCarreaux; i++) {
             //Deplace les bleus
@@ -46,12 +46,12 @@ public class Plateau {
         }
     }
 
-    public void ajouteGuerriers(PlateauUtilitaire.Couleur couleur, LinkedList<Guerrier> guerriers){
-        if(couleur == PlateauUtilitaire.Couleur.BLEU){
-            getCarreaux().get(getCarreaux().size()-1).ajouterGuerriers(PlateauUtilitaire.Couleur.BLEU, guerriers);
+    public void ajouteGuerriers(Utilitaire.Couleur couleur, LinkedList<Guerrier> guerriers){
+        if(couleur == Utilitaire.Couleur.BLEU){
+            getCarreaux().get(getCarreaux().size()-1).ajouterGuerriers(Utilitaire.Couleur.BLEU, guerriers);
         }
         else {
-            getCarreaux().get(0).ajouterGuerriers(PlateauUtilitaire.Couleur.ROUGE, guerriers);
+            getCarreaux().get(0).ajouterGuerriers(Utilitaire.Couleur.ROUGE, guerriers);
         }
     }
 
@@ -63,11 +63,11 @@ public class Plateau {
         }
     }
 
-    public PlateauUtilitaire.Couleur equipeAGagne(){
-        if(getCarreaux().get(0).getGuerriers(PlateauUtilitaire.Couleur.BLEU).size() != 0){
-            return PlateauUtilitaire.Couleur.BLEU;
-        } else if (getCarreaux().get(getCarreaux().size()-1).getGuerriers(PlateauUtilitaire.Couleur.ROUGE).size() != 0){
-            return PlateauUtilitaire.Couleur.ROUGE;
+    public Utilitaire.Couleur equipeAGagne(){
+        if(getCarreaux().get(0).getGuerriers(Utilitaire.Couleur.BLEU).size() != 0){
+            return Utilitaire.Couleur.BLEU;
+        } else if (getCarreaux().get(getCarreaux().size()-1).getGuerriers(Utilitaire.Couleur.ROUGE).size() != 0){
+            return Utilitaire.Couleur.ROUGE;
         } else {
             return null;
         }

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Chateau {
@@ -6,16 +5,16 @@ public class Chateau {
     private final static int RESSOURCES_AJOUT_TOUR = 1;
 
     private int ressources;
-    private PlateauUtilitaire.Couleur couleur;
+    private Utilitaire.Couleur couleur;
     private LinkedList<Guerrier> guerrierNovices;
 
-    public Chateau(PlateauUtilitaire.Couleur couleur) {
+    public Chateau(Utilitaire.Couleur couleur) {
         this.couleur = couleur;
         this.ressources = RESSOURCES_INITIAL;
         this.guerrierNovices = new LinkedList<>();
     }
 
-    public PlateauUtilitaire.Couleur getCouleur() {
+    public Utilitaire.Couleur getCouleur() {
         return couleur;
     }
 
@@ -28,11 +27,11 @@ public class Chateau {
     }
 
     public boolean estBleu(){
-        return this.couleur == PlateauUtilitaire.Couleur.BLEU;
+        return this.couleur == Utilitaire.Couleur.BLEU;
     }
 
     public boolean estRouge(){
-        return this.couleur == PlateauUtilitaire.Couleur.ROUGE;
+        return this.couleur == Utilitaire.Couleur.ROUGE;
     }
 
     public void ajoutGuerrierNovice(Guerrier guerrier){

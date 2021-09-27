@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,17 +10,17 @@ public class Carreau {
         this.guerriersRouges = new LinkedList<>();
     }
 
-    public LinkedList<Guerrier> getGuerriers(PlateauUtilitaire.Couleur couleur) {
-        if(couleur == PlateauUtilitaire.Couleur.ROUGE){
+    public LinkedList<Guerrier> getGuerriers(Utilitaire.Couleur couleur) {
+        if(couleur == Utilitaire.Couleur.ROUGE){
             return guerriersRouges;
         } else {
             return guerriersBleus;
         }
     }
 
-    public LinkedList<Guerrier> retirerGuerriers(PlateauUtilitaire.Couleur couleur){
+    public LinkedList<Guerrier> retirerGuerriers(Utilitaire.Couleur couleur){
         LinkedList<Guerrier> guerriers;
-        if(couleur == PlateauUtilitaire.Couleur.ROUGE){
+        if(couleur == Utilitaire.Couleur.ROUGE){
             guerriers = (LinkedList<Guerrier>) guerriersRouges.clone();
             guerriersRouges.clear();
         } else {
@@ -31,8 +30,8 @@ public class Carreau {
         return guerriers;
     }
 
-    public void ajouterGuerriers(PlateauUtilitaire.Couleur couleur, LinkedList<Guerrier> guerriers){
-        if(couleur == PlateauUtilitaire.Couleur.ROUGE){
+    public void ajouterGuerriers(Utilitaire.Couleur couleur, LinkedList<Guerrier> guerriers){
+        if(couleur == Utilitaire.Couleur.ROUGE){
             guerriersRouges.addAll(guerriers);
         } else {
             guerriersBleus.addAll(guerriers);
